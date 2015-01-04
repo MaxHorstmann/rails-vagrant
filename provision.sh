@@ -1,5 +1,9 @@
 #!/bin/bash
-# see https://gorails.com/setup/ubuntu/14.04
+# See also: 
+# * https://gorails.com/setup/ubuntu/14.04
+# * https://rvm.io
+# * http://www.postgresql.org/download/linux/ubuntu
+
 
 echo "deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -19,7 +23,8 @@ echo "source /usr/local/rvm/scripts/rvm" >> ~/.bashrc
 rvm install 2.1.5
 rvm use 2.1.5 --default
 
-# echo "gem: --no-ri --no-rdoc" > ~/.gemrc
+echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
-# gem install rails
+gem install rails
+
 
